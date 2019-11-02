@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DAL.ViewModel.TOViewModel>
+
+@{
+    ViewBag.Title = "Список TO";
+}
+
+<h2>Список TO</h2>
+
+<p>
+    <div class="col-md-2">@Html.ActionLink("Фильтровать", "Filter")</div>
+    <div>@Html.ActionLink("Весь список", "Index")</div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TOName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Подробнее", "Details", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

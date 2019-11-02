@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = " Статистика";
+}
+
+<h2>Статистика</h2>
+
+<div>
+    <div class="form-group">
+        <label>Самое заказываемое ТО: </label>
+        <span>@ViewBag.Service.GetMostPopularTO().Item1 ( @ViewBag.Service.GetMostPopularTO().Item2 )</span>
+    </div>
+
+    <div class="form-group">
+        <label>Средний чек заказа: </label>
+        <span>@ViewBag.Service.GetAverageCheck()</span>
+    </div>
+
+    <div>
+        <img alt="alternateText" src="@Url.Action("CreateChart")" />
+    </div>
+
+    @Html.ActionLink("Сохранить отчет по статистике", "SaveStatistic")
+</div>
