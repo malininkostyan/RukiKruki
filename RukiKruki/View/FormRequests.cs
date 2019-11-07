@@ -124,7 +124,7 @@ namespace View
                             directoryPath
                         };
 
-                        MailService.SendEmail("volerdman@gmail.com", "Оповещение по заявкам",
+                        MailService.SendEmail("malost.73@gmail.com", "Оповещение по заявкам",
                             $"Заявка №{id} от {data.DateCreate}", files);
 
                         MessageBox.Show("Отчёт успешно сохранен и отправлен получателю", "Информация", MessageBoxButtons.OK);
@@ -137,7 +137,7 @@ namespace View
         {
             if (dataGridView.SelectedRows.Count == 1)
             {
-                if (MessageBox.Show("Создать отчет в Excel", "Вопрос", MessageBoxButtons.YesNo,
+                if (MessageBox.Show("Создать отчет в Word", "Вопрос", MessageBoxButtons.YesNo,
                MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
@@ -171,7 +171,7 @@ namespace View
                             directoryPath
                         };
 
-                        MailService.SendEmail("volerdman@gmail.com", "Оповещение по заявкам",
+                        MailService.SendEmail("malost.73@gmail.com", "Оповещение по заявкам",
                             $"Заявка №{id} от {data.DateCreate}", files);
 
                         MessageBox.Show("Заявка успешно сохранена и отправлена поставшику", "Информация", MessageBoxButtons.OK);

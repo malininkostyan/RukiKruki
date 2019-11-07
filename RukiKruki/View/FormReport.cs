@@ -203,7 +203,7 @@ namespace View
                             directoryPath
                         };
 
-                MailService.SendEmail("volerdman@gmail.com", "Оповещение по заявкам",
+                MailService.SendEmail("malost.73@gmail.com", "Оповещение по заявкам",
                     $"Отчет от {reportModel.DateFrom} по {reportModel.DateTo}", files);
 
                 MessageBox.Show("Отчёт успешно сохранен и отправлен получателю", "Информация", MessageBoxButtons.OK);
