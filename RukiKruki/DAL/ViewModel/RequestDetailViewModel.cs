@@ -10,6 +10,9 @@ namespace DAL.ViewModel
 
         public int RequestId { get; set; }
 
+        [DisplayName("Название детали")]
+        public string DetailName { get; set; }
+
         [DisplayName("Количество деталей")]
         public int Amount { get; set; }
     }

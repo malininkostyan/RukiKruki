@@ -164,7 +164,7 @@ namespace View
                     requestDetailsBinding.Add(new DetailRequestBindingModel
                     {
                         Id = details[i].Id,
-                        DetailId = details[i].DetailId,
+                        DetailId = details[i].DetailId, 
                         Amount = details[i].Amount,
                     });
                 }

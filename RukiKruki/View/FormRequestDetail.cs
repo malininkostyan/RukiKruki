@@ -50,6 +50,7 @@ namespace View
                     model = new RequestDetailViewModel
                     {
                         DetailId = Convert.ToInt32(comboBoxDetails.SelectedValue),
+                        DetailName = comboBoxDetails.Text,
                         Amount = Convert.ToInt32(textBoxAmount.Text)
                     };
                 }
